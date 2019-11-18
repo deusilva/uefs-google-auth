@@ -1,0 +1,14 @@
+{
+    "name": "uefs/uefs-google-auth",
+    "description": "Project to share Google Auth implementation",
+    "require": {
+        "php": ">=5.4",
+        "google/apiclient": "^2.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "UEFSGoogleAuth\\": "src/"
+        }
+    },
+    "version": "1.0.0"
+}
