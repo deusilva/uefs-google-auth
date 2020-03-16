@@ -40,6 +40,15 @@ class GoogleServiceFactory {
         return new ServiceSheets($this->getGoogleClient(), $this->serviceAccountPath);
     }
 
+    /**
+     * Get Google Service Gmail
+     *
+     * @return ServiceGmail
+     */
+    public function getGoogleServiceGmail() {
+        return new ServiceGmail($this->getGoogleClient(), $this->serviceAccountPath);
+    }
+
     public function getServiceAccountPath() {
         return $this->serviceAccountPath;
     }
