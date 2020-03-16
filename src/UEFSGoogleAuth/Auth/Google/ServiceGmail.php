@@ -2,18 +2,18 @@
 
 namespace UEFSGoogleAuth\Auth\Google;
 
-use Google_Service_Sheets;
+use Google_Service_Gmail;
 
-class ServiceSheets extends AbstractGoogleService {
+class ServiceGmail extends AbstractGoogleService {
 
     /**
      * 
      *
-     * @return Google_Service_Sheets
+     * @return Google_Service_Gmail
      */
     public function getService()
     {
-        $service = new Google_Service_Sheets($this->client);
+        $service = new Google_Service_Gmail($this->client);
         return $service;
     }
 
@@ -24,7 +24,7 @@ class ServiceSheets extends AbstractGoogleService {
      */
     public function getScopes() {
         return [
-            Google_Service_Sheets::SPREADSHEETS
+            Google_Service_Gmail::GMAIL_SEND
         ];
     }
 
